@@ -1,4 +1,4 @@
-package main;
+package main.java8;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +18,7 @@ public class Java8NewFeature {
         /**
          * Before Java 8
          */
+        System.out.println("===============NOW IN JAVA 8=================");
         Collections.sort(humans, new Comparator<Human>() {
             @Override
             public int compare(Human o1, Human o2) {
@@ -38,5 +39,6 @@ public class Java8NewFeature {
             System.out.println(human.getName() + "  "+ human.getAge());
 
         }
+        humans.sort((h1,h2) -> h1.getName().compareTo(h2.getName()));
     }
 }
